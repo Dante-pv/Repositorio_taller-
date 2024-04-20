@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/katorepo_micro/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/katorepo_micro/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/katorepo_micro",
+  "projects": {
+    "katorepo_micro": {
+      "type": "application",
+      "root": "apps/katorepo_micro",
+      "entryFile": "main",
+      "sourceRoot": "apps/katorepo_micro/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/katorepo_micro/tsconfig.app.json"
+      }
+    },
+    "micap": {
+      "type": "application",
+      "root": "apps/micap",
+      "entryFile": "main",
+      "sourceRoot": "apps/micap/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/micap/tsconfig.app.json"
+      }
+    }
+  }
+}
